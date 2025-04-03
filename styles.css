@@ -240,22 +240,23 @@ footer {
 </div>
 </div> */
 
-#register-popup-container {
+#login-popup-container {
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 20;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#register-form {
+#login-form {
   width: 60%;
-  height: 600px;
+  height: 500px;
   background-color: white;
   border-radius: 30px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -265,12 +266,42 @@ footer {
 #img-leftsite {
   width: 50%;
   height: 100%;
+  background-image: url(/images/login\ bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px 0 0 30px;
 }
 
-#img-leftsite img {
-  object-fit: contain;
-}
-
-#register-form #form-rightsite {
+#form-rightsite {
   flex:1;
+  padding: 20px;
+}
+
+#form-rightsite h3 {
+  font-weight: lighter;
+  font-size: medium;
+  margin-bottom: 50px;
+}
+
+.login-option {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.login-option:hover {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+#or {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(156, 155, 155);
 }

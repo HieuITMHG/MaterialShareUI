@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100vw;
+    font-family: sans-serif;
+    background: linear-gradient(45deg, black, rgba(0, 0, 0, 0));
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    margin-top: 10px;
+    z-index: 10;
+  }
+  
+  #navbar-leftsite {
+    display: flex;
+  }
+   
+  #nav-item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 100px;
+    gap: 50px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-item {
+    cursor: pointer;
+  }
+  
+  .nav-item:hover {
+    color: rgb(179, 217, 217);
+    transform: scale(1.1); 
+  }
+  
+  #logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+  }
+  
+  #navbar-rightsite {
+    margin-right: 50px;
+    position: relative;
+  }
+
+  #navbar-rightsite img {
+    height: 50px;
+  }
+
+  #arrow-container {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0px;
+    right: 0px;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  #arrow-container  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  #banner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 10px 20px;
+  }
+  
+  #banner {
+    height: 250px;
+    width: 100%;
+    padding: 50px;
+    background-image: url(./images/book-shelf.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #banner div {
+    display: flex;
+  }
+  
+  #search-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 0 30px 30px 0;
+    background-color: white;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+  }
+  
+  
+  #banner input {
+    width: 500px;
+    height: 40px;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    border: none;
+    padding: 0 0 0 20px;
+    font-size: medium;
+  }
+  
+  .label-container {
+    display: flex;
+    height: 30px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: white;
+    margin-right: 10px;
+  }
+
+  .content-container img {
+    height: full;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .slide-item {
+    min-height: 200px;
+    min-width: 200px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ tối */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .slide-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .slide-item:hover img {
+    transform: scale(1.1); /* Phóng to ảnh 10% khi hover */
+  }
+  
+  .slide-item img {
+    height: 90%;
+    width: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 20px;
+  }
+  
+  .heart-icon {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 100%;
+    display: none;
+    z-index: 10;
+  }
+  
+  .save-icon {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 100%;
+    display: none;
+    z-index: 10;
+  }
+  
+  .heart-icon:hover, .save-icon:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .slide-item:hover .heart-icon,
+  .slide-item:hover .save-icon {
+    display: block;
+  }
+  
+  .heart-icon img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* FOOTER */
+  footer {
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    color: white;
+  }
+  
+  /* Register pop up form */
+  /* <div id="register-popup-container">
+  <div id="register-form">
+      <div id="img-leftsite">
+  
+      </div>
+      <div id="form-rightsite">
+  
+      </div>
+  </div>
+  </div> */
+  
+  #login-popup-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #login-form {
+    width: 60%;
+    height: 500px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+  
+  #img-leftsite {
+    width: 50%;
+    height: 100%;
+    background-image: url(/images/login\ bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px 0 0 30px;
+  }
+  
+  #form-rightsite {
+    flex:1;
+    padding: 20px;
+  }
+
+
+  
+  #form-rightsite h3 {
+    font-weight: lighter;
+    font-size: medium;
+    margin-bottom: 50px;
+  }
+  
+  .login-option {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .login-option:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+  }
+  
+  #or {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(156, 155, 155);
+  }

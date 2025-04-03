@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <!-- Nav bar -->
@@ -15,12 +15,14 @@
             </div>
             <div id="nav-item-container">
                 <div class="nav-item">Home</div>
-                <div class="nav-item">Course</div>
+                <div class="nav-item">Library</div>
             </div>
         </div>
         <div id="navbar-rightsite">
-            <button class="sign-up-btn" id="login-btn">Login</button>
-            <button class="sign-up-btn">Sign up</button>
+            <img src="./images/avt_man.png" alt="avatar">
+            <span id="arrow-container">
+                <img src="./images/icons/arrow-down-icon.svg" alt="arrow-down-icon" />
+            </span>
         </div>
     </div>
 
@@ -29,8 +31,26 @@
         <div id="banner">
             <div>
                 <input />
-                <span>
+                <span id="search-icon">
                     <img src="./images/icons/search-icon.svg" alt="search-icon"/>
+                </span>
+            </div>
+            <div>
+                <span class="label-container">
+                    <img src="./images/icons/label-icon.svg"/>
+                    <p>History</p>
+                </span>
+                <span class="label-container">
+                    <img src="./images/icons/label-icon.svg"/>
+                    <p>Math</p>
+                </span>
+                <span class="label-container">
+                    <img src="./images/icons/label-icon.svg"/>
+                    <p>Geography</p>
+                </span>
+                <span class="label-container">
+                    <img src="./images/icons/label-icon.svg"/>
+                    <p>Bio</p>
                 </span>
             </div>
         </div>
@@ -135,7 +155,7 @@
             </div>
         </div>
         <div class="content-container">
-            <h3 class="title">Top view</h3>
+            <h3 class="title">Continue</h3>
             <div class="slider-container">
                 <div class="slider">
                     <div class="slide-item">
